@@ -52,7 +52,22 @@ for row in csvreader:
     if line == min_index + 2:
         print("Greatest Decrease in Profits: {}({})".format(row[0], min_value))    
 
-   
+
+first = "Financial Analysis"
+second = "----------------------"
+third =  f'Total Months: {total_months}'
+
+# Create the path for the filename
+data_output = "data.csv"
+
+# Write data to a .csv file
+with open(data_output, "w", newline="") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow([first])
+    writer.writerow([second])
+    writer.writerow([third])
+    writer.writerow([41])
+    
 
 
 
