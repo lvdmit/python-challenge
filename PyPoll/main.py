@@ -59,3 +59,17 @@ print("O'Tooley: {:.3%} ({})".format(Tooley_percent, Tooley_total))
 print("--------------------------")
 print("Winner: {}".format(sorted_votes[0][0]))
 print("--------------------------")
+
+data_output = open("data.txt", "w")
+
+# Write data to a .txt file
+data_output.write("Election Results\n")
+data_output.write("--------------------------\n")
+data_output.write(f"Total Votes: {total_votes}\n")
+data_output.write("--------------------------\n")
+data_output.write("Khan: {:.3%} ({})\n".format(Khan_percent, Khan_total))
+data_output.write("Correy: {:.3%} ({})\n".format(Correy_percent, Correy_total))
+data_output.write("Li: {:.3%} ({})\n".format(Li_percent, Li_total))
+data_output.write("--------------------------\n")
+data_output.write("Winner: {}\n".format(sorted_votes[0][0]))
+data_output.write("--------------------------")

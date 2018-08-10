@@ -48,25 +48,24 @@ for row in csvreader:
     line += 1
     #index + 2 because we skipped 2 lines before
     if line == max_index + 2:
-        print("Greatest Increase in Profits: {}({})".format(row[0], max_value))
+        increase = row[0]
+        print("Greatest Increase in Profits: {}({})".format(increase, max_value))
     if line == min_index + 2:
-        print("Greatest Decrease in Profits: {}({})".format(row[0], min_value))    
+        decrease = row[0]
+        print("Greatest Decrease in Profits: {}({})".format(decrease, min_value))    
 
 
-first = "Financial Analysis"
-second = "----------------------"
-third =  f'Total Months: {total_months}'
+data_output = open("data.txt", "w")
 
-# Create the path for the filename
-data_output = "data.csv"
+# Write data to a .txt file
+data_output.write("Financial Analysis\n")
+data_output.write("----------------------\n")
+data_output.write(f'Total Months: {total_months}\n')
+data_output.write(f'Total: ${total}\n')
+data_output.write(f"Average  Change: ${average_change}\n")
+data_output.write("Greatest Increase in Profits: {}({})\n".format(increase, max_value))
+data_output.write("Greatest Decrease in Profits: {}({})".format(decrease, min_value))
 
-# Write data to a .csv file
-with open(data_output, "w", newline="") as csvfile:
-    writer = csv.writer(csvfile)
-    writer.writerow([first])
-    writer.writerow([second])
-    writer.writerow([third])
-    writer.writerow([41])
     
 
 
