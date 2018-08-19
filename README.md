@@ -1,6 +1,6 @@
 # python-challenge
 
-##PyBank
+## PyBank
 
 This project analyzes the financial records of an imaginary company. 
 The final report includes:
@@ -21,7 +21,7 @@ Files included within this projects:
 * data.txt (final report)
 
   
-##PyPoll
+## PyPoll
 
 This project performs vote-counting process, it analyzes the votes and finds a winner of an election in a imaginary town.
 
